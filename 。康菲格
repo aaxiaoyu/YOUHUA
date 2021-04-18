@@ -47,21 +47,14 @@ CONFIG_STRIP_KERNEL_EXPORTS=y
 CONFIG_BUSYBOX_DEFAULT_FEATURE_MOUNT_LOOP=y
 CONFIG_PACKAGE_kmod-loop=y
 CONFIG_LUCI_SRCDIET=y
-
-CONFIG_PACKAGE_luci-app-passwall=y
-CONFIG_PACKAGE_luci-app-passwall_INCLUDE_ChinaDNS_NG=y
-# CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Shadowsocks is not set
-# CONFIG_PACKAGE_luci-app-passwall_INCLUDE_ShadowsocksR_Server is not set
-# CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Shadowsocks_Server is not set
-# CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Xray is not set
-# CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Trojan_Plus is not set
-# CONFIG_PACKAGE_luci-app-passwall_INCLUDE_V2ray is not set
-# CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Shadowsocks is not set
-# CONFIG_PACKAGE_luci-app-passwall_INCLUDE_https_dns_proxy is not set
-# CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Shadowsocks_Server is not set
-# CONFIG_PACKAGE_luci-app-passwall_INCLUDE_ShadowsocksR_Server is not set
-# CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Trojan_Plus is not set
-# CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Trojan_GO is not set
+CONFIG_PACKAGE_luci-app-ssr-plus=y
+CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks=y
+CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray_plugin=y
+CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Xray=y
+CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Trojan=y
+CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Redsocks2=y
+CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Server=y
+CONFIG_PACKAGE_luci-i18n-ssr-plus-zh-cn=y
 CONFIG_PACKAGE_xray=m
 # CONFIG_V2RAY_COMPRESS_UPX is not set
 # CONFIG_XRAY_COMPRESS_UPX is not set
