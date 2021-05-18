@@ -12,7 +12,12 @@
 
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
-#
-#添加SSR PLUS+
-echo "src-git helloworld https://github.com/fw876/helloworld" >> feeds.conf.default
-./scripts/feeds update -a && ./scripts/feeds install -a
+
+# 修复核心及添加温度显示
+sed -i 's|pcdata(boardinfo.system or "?")|luci.sys.exec("uname -m") or "?"|g' feeds/luci/modules/luci-mod-admin-full/luasrc/view/admin_status/index.htm
+sed -i 's/or "1"%>/or "1"%> ( <%=luci.sys.exec("expr `cat \/sys\/class\/thermal\/thermal_zone0\/temp` \/ 1000") or "?"%> \&#8451; ) /g' feeds/luci/modules/luci-mod-admin-full/luasrc/view/admin_status/index.htm
+
+# Add luci-app-ssr-plus
+pushd package/lean
+git clone --depth=1 https://github.com/fw876/helloworld
+popd
